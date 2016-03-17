@@ -13,3 +13,4 @@ for Mac：
 4、在选项右侧代理配置文件内填写以下内容
 https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
 5、确定，应用，退出
+tips:部分浏览器（或软件）可能需要选择使用系统（或IE）代理才能使用，一般在高级选项能找到
