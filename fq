@@ -1,0 +1,15 @@
+最傻全局翻墙（自动在线代理）教程：
+for Windows：
+1、打开IE，找到设置
+2、依次点击Internet选项，连接，局域网设置
+3、勾选使用自动配置脚本（第二个选项）
+4、在选项文本框内填写以下内容
+https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
+5、确定，退出
+for Mac：
+1、点击左上角小苹果，打开系统偏好设置
+2、依次点击I网络，高级，代理选项卡
+3、请选择一个协议进行配置，勾选使用自动代理配置（第二个选项）
+4、在选项右侧代理配置文件内填写以下内容
+https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
+5、确定，应用，退出
