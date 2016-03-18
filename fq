@@ -1,16 +1,24 @@
 最傻全局翻墙（自动在线代理）教程：
-for Windows：
+要使用到的URL:https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
+for Windows:
 1、打开IE，找到设置
 2、依次点击Internet选项，连接，局域网设置
 3、勾选使用自动配置脚本（第二个选项）
-4、在选项文本框内填写以下内容
-https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
+4、在选项文本框内填写以上URL
 5、确定，退出
-for Mac：
+for Mac:
 1、点击左上角小苹果，打开系统偏好设置
 2、依次点击I网络，高级，代理选项卡
 3、请选择一个协议进行配置，勾选使用自动代理配置（第二个选项）
-4、在选项右侧代理配置文件内填写以下内容
-https://raw.githubusercontent.com/kgfw/fg/master/pac/cfu.pac
+4、在选项右侧代理配置文件内填写以上URL
 5、确定，应用，退出
-tips:部分浏览器（或软件）可能需要选择使用系统（或IE）代理才能使用，一般在高级选项能找到
+for Android:
+1、进入WiFi连接界面，长按当前已连接WiFi，选择修改网络
+2、展开高级选项，代理选择自动代理配置，pac网址填入以上的URL，IP设置选择DHCP
+3、保存，退出
+for iOS:
+1、进入WiFi连接界面，进入当前WiFi详情页
+2、拉到底部，代理选择自动，URL填入以上URL
+3、保存，退出
+tips:部分浏览器（或软件）可能需要选择使用系统（或IE）代理才能使用，一
+般在高级选项能找到。系统具体版本可能不同，但操作大同小异。
