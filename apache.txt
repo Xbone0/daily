@@ -1,0 +1,18 @@
+1、安装apache
+	步骤：
+	1)确认安装vc++ 2008
+	2)在Apache/conf/httpd.conf中修改ServerRoot
+	3)运行httpd.exe启动apache
+	端口错误：
+	1）80端口被占用，在httpd.conf中修改listen端口
+	2）443端口被（vmware，skype）占用，在Apache/conf/extra/httpd-ahssl 和httpd-ssl.conf 中修改listen端口
+	将apache注册为系统服务
+	1）httpd -k install
+	常用命令
+	Start Apache				httpd -k start
+	Stop Apache	 				httpd -k stop
+	Restart Apache				httpd -k restart
+	Uninstall Apache Service	httpd -k uninstall
+	Test Config Syntax			httpd -t
+	Version Details				httpd -V
+	Command Line Options List	httpd -h

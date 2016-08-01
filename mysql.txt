@@ -1,0 +1,29 @@
+1、windows下mysql5.7压缩免安装版配置
+	1）复制my-default.ini保存为my.ini，并修改basedir（mysql安装根目录） 和 datadir（数据目录，无需提前创建）为指定的目录
+	2）管理员启动cmd，cd进入mysql/bin目录，执行 
+		mysqld --initialize
+	进行初始化，会生成上一部指定的data目录和一个默认的 root 密码
+	3）执行 mysqld --install MySQL --defaults-file=mysql/my.ini ，将mysql注册为系统服务
+	4）net start mysql 启动mysql
+	5）mysql -u root -p 登陆并修改密码
+	注意：由于是使用的 –initialize 进行的安全模式初始化，默认会为 ‘root’@’localhost’ 生成一个随机密码串，因此在第一次登陆时，需要找到 basedata 目录下的 计算机名.err 的标准错误输出文件。在里面可以看到有一串[Note] A temporary password is generated for root@localhost: V/T2dU%79/Ds
+	冒号后面的部分的就是系统生成的随机 root 密码，输入该密码即可以 root 身份成功登陆。
+	6）运行 ALTER USER root@localhost IDENTIFIED BY 'newpassword' 修改密码
+
+2、修改mysql字符编码为utf8，在my.ini中修改三个section（没有则创建）
+	[mysql]
+	default-character-set=utf8
+	[client]
+	default-character-set=utf8
+	[mysqld]
+	character-set-server=utf8
+
+3、mysql5.7创建新用户，并赋予权限
+	1）root身份登入，use mysql
+	2）create USER 'user'@'%' IDENTIFIED BY 'password';
+	3）grant all privileges on db.table to 'user'@'%' identified by "password";
+	4）flush privileges;
+	
+4、现有用户赋予远程权限
+	1)update db set host='%' where user='name';（如果写成 host=localhost 那此用户就不具有远程访问权限）
+	2)flush privileges;

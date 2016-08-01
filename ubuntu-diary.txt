@@ -1,0 +1,19 @@
+1、关闭错误报告
+	设置/etc/default/apport enabled=0
+2、python gae报错
+	可能缺少python-gevent，安装即可
+3、update 报错 GPG error:NO_PUBKEY [key]
+	sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com [key]
+4、使用淘宝的npm库镜像
+	npm install -g cnpm --registry=http://registry.npm.taobao.org
+5、安装microsoft中文字体
+    1）打包 C:/Windows/Fonts/ 目录下所有 .TTF结尾的字体，或按索引选择中文及一部分西文字体（随意）
+    2）将压缩包解压到/usr/share/fonts/truetype/ms-fonts(需新建) 目录或~/.fonts目录下 
+    3）执行 fc-cache -f -v 刷新字体信息文件
+6、vi设置字体
+	
+7、vi配色solarized
+	1) 克隆git仓库 git clone git://github.com/altercation/vim-colors-solarized.git
+	2) cd ./vim-colors-solarized/colors 
+	3) cp solarized.vim  ~/.vim/colors/
+	4) 设置 .vimrc 中 colorscheme solarized
