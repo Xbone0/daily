@@ -61,3 +61,8 @@
 	4）Impl，DAO接口的实现类；
 	5）Proxy，代理实现类，管理数据库的开闭，调用Impl对象的真实操作；
 	6）Factory，取得DAO的实例化对象。	
+7、位运算与逻辑运算在逻辑判断中有所不同（以||和|为例）
+	a||b:a为true时，b不会得到执行
+	a|b:a和b的真值都会得到判断
+	在下列情况下使用|容易出现空对象：
+	List list=getList();while(list==null|list.get(0)==null)
