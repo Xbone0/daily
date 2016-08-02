@@ -1,3 +1,4 @@
+一、安装配置篇
 1、windows下mysql5.7压缩免安装版配置
 	1）复制my-default.ini保存为my.ini，并修改basedir（mysql安装根目录） 和 datadir（数据目录，无需提前创建）为指定的目录
 	2）管理员启动cmd，cd进入mysql/bin目录，执行 
@@ -23,7 +24,9 @@
 	2）create USER 'user'@'%' IDENTIFIED BY 'password';
 	3）grant all privileges on db.table to 'user'@'%' identified by "password";
 	4）flush privileges;
-	
-4、现有用户赋予远程权限
+4、重置密码	
+	if version>5.76  use mysql; update user set authentication_string=PASSWORD('newpass') where User='user';
+	if version<5.76  use mysql;update user set password=PASSWORD('newpass') where User='user'; 
+5、现有用户赋予远程权限
 	1)update db set host='%' where user='name';（如果写成 host=localhost 那此用户就不具有远程访问权限）
 	2)flush privileges;
