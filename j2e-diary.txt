@@ -66,3 +66,5 @@
 	a|b:a和b的真值都会得到判断
 	在下列情况下使用|容易出现空对象：
 	List list=getList();while(list==null|list.get(0)==null)
+8、maven打包.war文件部署到tomcat
+        1）打包.war: VIEW->TOOL WINDOWS->MARVEN PROJECTS->
