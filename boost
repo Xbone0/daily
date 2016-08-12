@@ -1,0 +1,4 @@
+一、编译并在vs中使用boost
+  1、双击bootstrap.bat生成b2.exe和bjam.exe
+  2、编译boost  b2 --build-dir=build-directory toolset=toolset-name --build-type=complete stage(全部编译，耗硬盘)
+  3、新建win32项目，将编译目录下的include和lib分别添加到include path和lib path
