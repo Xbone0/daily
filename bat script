@@ -1,0 +1,7 @@
+1、延迟N秒关闭窗口的方法
+
+    timeout N  //倒计时N秒
+    
+    或者 ping 127.0.0.0 -n 1 -w N*1000  //-n 1 attempt to connect once -w N*1000 waits N sec
+    
+2、命令后加 >null 不显示信息在屏幕
